@@ -19,6 +19,8 @@ Our strategy for testing this system is to unit test with a combination of vario
 
 # 3 Test cases developed
 
+## DataUtilities
+
 ### calculateColumnTotal(Values2D, int);
 `calculateColumnTotalTest();`
 
@@ -34,7 +36,23 @@ Our strategy for testing this system is to unit test with a combination of vario
 
 ### calculateRowTotal(Values2D, int);
 
-### clone(double[][]);
+### equal(double[][], double[][]);
+
+### createNumberArray(double[]);
+
+### createNumberArray2D(double[][]);
+
+## Range
+
+### getLowerBound();
+
+### getLength();
+
+### contains();
+
+### combine();
+
+### getUpperBound();
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
