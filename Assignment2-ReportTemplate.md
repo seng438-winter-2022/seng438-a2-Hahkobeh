@@ -35,24 +35,41 @@ Our strategy for testing this system is to unit test with a combination of vario
 `calculateColumnTotalTestZeroTotal()`
 
 ### calculateRowTotal(Values2D, int);
+`calculateRowTotalTest()`
+`calculateRowTotalTestZero()`
+`calculateRowTotalTestZeroTotal()`
+`calculateRowTotalTestNegative()`
+`calculateRowTotalTestNegativeTotal()`
+`calculateRowTotalTestNoColumns()`
+`calculateRowTotalTestOtherRow()`
 
 ### equal(double[][], double[][]);
+`equalsTestMatching()`
+`equalsTestNotMatching()`
+`equalsTestNotMatchingExtraRow()`
 
 ### createNumberArray(double[]);
+`createNumberArrayTest()`
 
 ### createNumberArray2D(double[][]);
+`createNumberArrayTest()`
 
 ## Range
 
 ### getLowerBound();
+`correctLowerBound()`
 
 ### getLength();
+`correctLength()`
 
 ### contains();
+`containsTest()`
 
 ### combine();
+`combineTest()`
 
 ### getUpperBound();
+`correctUpperBound()`
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
