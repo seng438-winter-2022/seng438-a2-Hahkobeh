@@ -58,9 +58,11 @@ Our strategy for testing this system is to unit test with a combination of vario
 
 ### getLowerBound();
 `correctLowerBound()`
+ CorrectLowerBound tests the function 'getLowerBound()' in the class Range. It ensures getLowerBound() returns the correct lower bound given a range.
 
 ### getLength();
 `correctLength()`
+CorrectLength tests the function 'getLength()' in the class Range. It ensures getLength() returns the correct length of the given range.
 
 ### contains();
 `containsTest()`
@@ -70,6 +72,7 @@ Our strategy for testing this system is to unit test with a combination of vario
 
 ### getUpperBound();
 `correctUpperBound()`
+CorrectUpperBound tests the function 'getUpperBound()' in the class Range. It ensures getUpperBound() returns the correct upper bound given a range.
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
