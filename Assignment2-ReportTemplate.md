@@ -56,6 +56,10 @@ Our strategy for testing this system is to unit test with a combination of vario
 
 ## Range
 
+### getCentralValue();
+`centralValueShouldBeZero()`
+CentralValueShouldBeZero() tests the function 'getCentralValue()' in the class Range. It ensures that getCentralValue returns the correct center value of a given range.
+
 ### getLowerBound();
 `correctLowerBound()`
  CorrectLowerBound tests the function 'getLowerBound()' in the class Range. It ensures getLowerBound() returns the correct lower bound given a range.
