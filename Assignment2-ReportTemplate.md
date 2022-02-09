@@ -83,12 +83,10 @@ the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
-
-Text…
+Team work was divided evenly in terms of writing the report, designing and writing the tests was done together on one computer for the sake of simplicity.
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
-
-Text…
+We faced some challenged initially in building some of the mock objects however there was lots of resources in the slides and online to refer too about them. We also ran into a roadblock with one of the supplied packages not working and after relizing that problem we went and found it online. 
 
 # 6 Comments/feedback on the lab itself
 
