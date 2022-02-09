@@ -7,7 +7,7 @@
 | Student Names: |  Nicholas Knapton   |
 |                |  Jacob Artusio   |
 |                |  Brian Kramer  |
-|                |  Colin Chripstophe   |
+|                |  Colin Christophe   |
 
 # 1 Introduction
 
