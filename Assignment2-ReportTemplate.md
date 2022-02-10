@@ -11,7 +11,8 @@
 
 # 1 Introduction
 
-Text…
+
+In our last last we practiced testing a system. This lab built on that knowledge by requiring us to choose what method of blackbox testing to utilize. Once chosen we were tasked with creating proper tests using the JUnit framework. While we may have had some exposure to JUnit testing prior to this lab, the lab had more extensive use than any prior use of the framework.
 
 # 2 Detailed description of unit test strategy
 
