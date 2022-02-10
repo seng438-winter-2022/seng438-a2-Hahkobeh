@@ -91,4 +91,4 @@ We faced some challenged initially in building some of the mock objects however 
 
 # 6 Comments/feedback on the lab itself
 
-Text…
+The lab was helpful for learning how to properly implement JUnit testing in a practical setting. It also taught how to use JMock and parameterized testing. These are skills that are important to understanding course material and thus made the lab intriguing.
