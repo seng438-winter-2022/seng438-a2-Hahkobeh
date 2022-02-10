@@ -5,7 +5,7 @@
 | Group \#:      |  5  |
 | -------------- | --- |
 | Student Names: |  Nicholas Knapton   |
-|                |  Jacob Artusio   |
+|                |  Jacob Artuso   |
 |                |  Brian Kramer  |
 |                |  Colin Christophe   |
 
