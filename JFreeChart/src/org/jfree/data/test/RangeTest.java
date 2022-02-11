@@ -30,6 +30,7 @@ public class RangeTest {
         	this.expectedResult = res;
         }
         
+		//Function sets up the initial range that will be used for the contains() testing
         @Before
         public void setUp() throws Exception { 
         	exampleRange = new Range(-1, 1);
@@ -37,7 +38,8 @@ public class RangeTest {
         
         
     	
-	    
+		//This funcitons sets the parameters that we wish to test for contains()
+		//Since we used boundary testing you can see that there is a test case at BLB, LB, ALB, NOM, BUB, UB, AUB positions for the exampleRange
 	    @Parameters
 	    public static Collection<Object[]> data(){
 	    	return Arrays.asList(new Object[][] {
@@ -51,12 +53,13 @@ public class RangeTest {
 	    	});
 	    }
 	    
+		//Runs test to assert if the expected result equals the actual result
 	    @Test
 	    public void containsTest() {
 	    	assertEquals("Contains test", this.expectedResult,exampleRange.contains(this.number));
 	    }
 	    
-	    
+	    //This wil clean the test environment by setting exampleRange to null
 	    @After
         public void tearDown() throws Exception {
 	    	exampleRange = null;
@@ -72,6 +75,7 @@ public class RangeTest {
     	private Range secondRange;
     	private Range expectedRange;
         
+		//Will set the first second and expected ranges
         public RangeCombinedTest(Range first, Range second, Range expected) {
         	this.firstRange = first;
         	this.secondRange = second;
@@ -82,7 +86,8 @@ public class RangeTest {
         public void setUp() throws Exception { 
         }
         
-	    
+	    //Function sets Parameters we wish to test for the combine() function
+		//Since we used strong equivalance class testing, there is every type of combination we could think of that will be created and run
 	    @Parameters
 	    public static Collection<Object[]> data(){
 	    	return Arrays.asList(new Object[][] {
@@ -108,11 +113,13 @@ public class RangeTest {
 	    	});
 	    }
 	    
+		//Function will test and assert that the combine() function using the first and second range resulted in the expected range
 	    @Test
 	    public void combineTest() {
 	    	assertEquals("Combine test", Range.combine(firstRange, secondRange), this.expectedRange);
 	    }
 	    
+		//This wil clean the test environment by setting firstRange, secondRange, and expectedRange to null
 	    @After
         public void tearDown() throws Exception {
         	firstRange = null;
@@ -133,7 +140,8 @@ public class RangeTest {
         @BeforeClass public static void setUpBeforeClass() throws Exception {
         }
 
-
+		
+		//Function sets up the  exampleRange that will be used for the getLowerBound(), getUpperBound(), and getLength() tests.
         @Before
         public void setUp() throws Exception { 
         	exampleRange = new Range(-1, 1);
@@ -146,22 +154,25 @@ public class RangeTest {
             0, exampleRange.getCentralValue(), .000000001d);
         }
         
-        
+        //Test will assert that the upper bound is the expected one that we set in expectedRange
         @Test
         public void correctUpperBound() {
         	assertEquals("The Upper Bound should be 1",1,exampleRange.getUpperBound(),.000000001d);
         }
         
+		//Test will assert that the lower bound is the expected negative one that we set in expectedRange
         @Test
         public void correctLowerBound() {
         	assertEquals("The Lower Bound should be -1",-1,exampleRange.getLowerBound(),.000000001d);
         }
         
+		//Will test to assert that the proper length is returned in our case 1 - (-1) which is 2
         @Test
         public void correctLength() {
         	assertEquals("The length should be 2", 2, exampleRange.getLength(),.000000001d);
         }
 
+		//will clean the test environment by setting example Rnage to null
         @After
         public void tearDown() throws Exception {
         	exampleRange = null;
@@ -173,4 +184,7 @@ public class RangeTest {
         }
     }
         
+}
+    
+
 }
