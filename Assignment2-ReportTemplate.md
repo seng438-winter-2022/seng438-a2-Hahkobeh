@@ -114,16 +114,15 @@ combineTest() check if the correct boolean was returned from the combine() funct
 ### getUpperBound();
 `correctUpperBound()`
 CorrectUpperBound tests the function 'getUpperBound()' in the class Range. It ensures getUpperBound() returns the correct upper bound given a range. We used equivalence testing as if there is an error in one test case its very likely it will result in an error for all other inputs.
- 
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
+
  
 # 4 How the team work/effort was divided and managed
 Team work was divided evenly in terms of writing the report, designing and writing the tests was done together on one computer for the sake of simplicity. We chose to have two meetings, the first meeting we got the environment setup and working on Jakes machine, developed a rough testing plan, and worked as a team to design and write the unit tests. The second meeting we divided up the work describing the test functions we built, we also wrote a "paper worthy" copy of our testing plan developed in the first meeting together with everyones input considered. We finally divided uip the intro, difficultys comments and discussion of mocking objects up and then reviewed eachothers work.
  
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 We faced some challenged initially in building some of the mock objects however there was lots of resources in the slides and online to refer too about them. We also ran into a roadblock with one of the supplied packages not working and after realizing that problem we went and found it online.
+
+I think we also learned alot more about mock objects, stubs, testing parameters, unit test design, blackbox testing techniques and more by actually applying what we learned in class to a real application. Although we ran into some challenges described above, these challenges also granted us some learning opportunitys.
  
 # 6 Comments/feedback on the lab itself
  
