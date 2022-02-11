@@ -27,7 +27,8 @@ Mocking is definitely a great tool to have in the testing tool belt. It isolates
 ## DataUtilities
  
 ### calculateColumnTotal(Values2D, int);
-The following functions test the function calculateColumnTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a column number the sum of the column will be correct when given an assortment of number combinations.
+The following functions test the function calculateColumnTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a column number the sum of the column will be correct when given an assortment of number combinations. We used robust testing to ensure that a range of input combinations were tested.
+
 `calculateColumnTotalTest();`
 The test calculateColumnTotalTest() checks the sum of a column that only contains positive rational numbers.
  
@@ -44,7 +45,7 @@ The test calculateColumnTotalTestOtherColumn() checks the sum of a different col
 The test calculateColumnTotalTestNoRows() checks the sum of a column that is 0.
  
 ### calculateRowTotal(Values2D, int);
-The following functions test the function calculateRowTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a row number the sum of the row will be correct when given an assortment of number combinations.
+The following functions test the function calculateRowTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a row number the sum of the row will be correct when given an assortment of number combinations. We used robust testing to ensure that a range of input combinations were tested.
  
 `calculateRowTotalTest()`
 The test calculateRowTotalTest() checks the sum of a row that only contains positive rational numbers.
@@ -68,7 +69,7 @@ The test calculateRowTotalTestNoColumns() checks the sum of a row that has no co
  The test calculateRowTotalTestOtherRow() checks the sum of a different row to ensure that these tests were consistent across rows in the table.
  
 ### equal(double[][], double[][]);
-The following functions test the function equal(double[][], double[][]) in the DataUtilities class. They ensure that the function will return the correct boolean after checking if the given arrays are equal.
+The following functions test the function equal(double[][], double[][]) in the DataUtilities class. They ensure that the function will return the correct boolean after checking if the given arrays are equal. This is done with equivalence testing as theres 3 different partitions and errors picked up by seperate tests in the same partition would likely be picked up by the one equalivalence test.
  
 `equalsTestMatching()`
 The equalsTestMatching() test checks if the equal(double[][], double[][]) function will return true given two arrays which are the same.
@@ -91,15 +92,15 @@ The createNumberArrayTest() asserted that the correct array was created by creat
  
 ### getCentralValue();
 `centralValueShouldBeZero()`
-CentralValueShouldBeZero() tests the function 'getCentralValue()' in the class Range. It ensures that getCentralValue returns the correct center value of a given range.
+CentralValueShouldBeZero() tests the function 'getCentralValue()' in the class Range. It ensures that getCentralValue returns the correct center value of a given range. We used equivalence testing with the range (-1,1) as if there is an error in one test case its very likely it will result in an error for all other inputs.
  
 ### getLowerBound();
 `correctLowerBound()`
-CorrectLowerBound tests the function 'getLowerBound()' in the class Range. It ensures getLowerBound() returns the correct lower bound given a range.
+CorrectLowerBound tests the function 'getLowerBound()' in the class Range. It ensures getLowerBound() returns the correct lower bound given a range. We used equivalence testing as if there is an error in one test case its very likely it will result in an error for all other inputs.
  
 ### getLength();
 `correctLength()`
-CorrectLength tests the function 'getLength()' in the class Range. It ensures getLength() returns the correct length of the given range.
+CorrectLength tests the function 'getLength()' in the class Range. It ensures getLength() returns the correct length of the given range. We used equivalence testing as if there is an error in one test case its very likely it will result in an error for all other inputs.
  
 ### contains();
 `containsTest()`
@@ -112,7 +113,7 @@ combineTest() check if the correct boolean was returned from the combine() funct
  
 ### getUpperBound();
 `correctUpperBound()`
-CorrectUpperBound tests the function 'getUpperBound()' in the class Range. It ensures getUpperBound() returns the correct upper bound given a range.
+CorrectUpperBound tests the function 'getUpperBound()' in the class Range. It ensures getUpperBound() returns the correct upper bound given a range. We used equivalence testing as if there is an error in one test case its very likely it will result in an error for all other inputs.
  
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
