@@ -26,7 +26,7 @@ out all combinations that needed to be tested. This helped to keep track of the 
 ### calculateColumnTotal(Values2D, int);
 The following functions test the function calculateColumnTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a column number the sum of the column will be correct when given an assortment of number combinations.
 `calculateColumnTotalTest();`
-This test calculateColumnTotalTest() checks the sum of a column that only contains positive rational numbers.
+The test calculateColumnTotalTest() checks the sum of a column that only contains positive rational numbers.
  
 `calculateColumnTotalTestNegative()`
 The test calculateColumnTotalTest() checks the sum of a column that contains a mix of positive and negative rational numbers.
@@ -44,10 +44,10 @@ The test calculateColumnTotalTestNoRows() checks the sum of a column that is 0.
 The following functions test the function calculateRowTotal(Values2D, int) in the DataUtilities class. They ensure that given a 2D array and a row number the sum of the row will be correct when given an assortment of number combinations.
  
 `calculateRowTotalTest()`
-This test calculateRowTotalTest() checks the sum of a row that only contains positive rational numbers.
+The test calculateRowTotalTest() checks the sum of a row that only contains positive rational numbers.
  
 `calculateRowTotalTestZero()`
- 
+ The test calculateRowTotalTestZero() checks the sum where one of the values is zero to ensure that this does not cause problems to the summation.
  
 `calculateRowTotalTestZeroTotal()`
 The test calculateRowTotalTestNoRows() checks the sum of a row that is 0.
