@@ -120,11 +120,11 @@ the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
  
 # 4 How the team work/effort was divided and managed
-Team work was divided evenly in terms of writing the report, designing and writing the tests was done together on one computer for the sake of simplicity.
+Team work was divided evenly in terms of writing the report, designing and writing the tests was done together on one computer for the sake of simplicity. We chose to have two meetings, the first meeting we got the environment setup and working on Jakes machine, developed a rough testing plan, and worked as a team to design and write the unit tests. The second meeting we divided up the work describing the test functions we built, we also wrote a "paper worthy" copy of our testing plan developed in the first meeting together with everyones input considered. We finally divided uip the intro, difficultys comments and discussion of mocking objects up and then reviewed eachothers work.
  
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 We faced some challenged initially in building some of the mock objects however there was lots of resources in the slides and online to refer too about them. We also ran into a roadblock with one of the supplied packages not working and after realizing that problem we went and found it online.
  
 # 6 Comments/feedback on the lab itself
  
-The lab was helpful for learning how to properly implement JUnit testing in a practical setting. It also taught how to use JMock and parameterized testing. These are skills that are important to understanding course material and thus made the lab intriguing.
+The lab was helpful for learning how to properly implement JUnit testing in a practical setting. It also taught how to use JMock and parameterized testing. These are skills that are important to understanding course material and thus made the lab intriguing. Comming out of the lab we have a greator understanding of the difficulty of jUnit (and unit testing in general) and while we feel more confident in implementing unit tests in our own projects, we understand that we are not junit experts after completing this lab.
