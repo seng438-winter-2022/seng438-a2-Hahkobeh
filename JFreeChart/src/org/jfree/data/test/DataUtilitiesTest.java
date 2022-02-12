@@ -27,14 +27,15 @@ public class DataUtilitiesTest extends DataUtilities {
 		Mockery mockingContext;
 		Values2D values;
 		
-	
+
+        //Creates a mockery for the tests and initializes values
 		@Before
 	    public void setUp() throws Exception { 
 			mockingContext = new Mockery();
 			values = mockingContext.mock(Values2D.class);
 	    }
 		
-		//regular function
+		// The test calculateColumnTotalTest() checks the sum of a column that only contains positive rational numbers.
 		@Test
 		public void calculateColumnTotalTest() {
 			mockingContext.checking(new Expectations() {
@@ -58,6 +59,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Column total should be 15.", 15, DataUtilities.calculateColumnTotal(values, 0), .000000001d);
 		}
 		
+        //The test calculateColumnTotalTestNoRows() checks the sum of a column that is 0
 		//zero value (boundary)
 		@Test
 		public void calculateColumnTotalTestZero() {
@@ -79,6 +81,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Column total should be 10.", 10, DataUtilities.calculateColumnTotal(values, 0), .000000001d);
 		}
 		
+        //The test calculateColumnTotalTest() checks the sum of a column that contains a mix of positive and negative rational numbers.
 		//negative value (boundary)
 		@Test
 		public void calculateColumnTotalTestNegative() {
@@ -95,6 +98,8 @@ public class DataUtilitiesTest extends DataUtilities {
 			
 			assertEquals("Column total should be 5.", 5, DataUtilities.calculateColumnTotal(values, 0), .000000001d);
 		}
+
+        //The test calculateColumnTotalTestNoRows() checks the sum of a column that has no rows to ensure that the sum is 0
 		//No rows (boundary)
 		@Test
 		public void calculateColumnTotalTestNoRows() {
@@ -108,6 +113,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Column total should be 0.", 0, DataUtilities.calculateColumnTotal(values, 0), .000000001d);
 		}
 		
+        //The test calculateColumnTotalTestOtherColumn() checks the sum of a different column to ensure that these tests were consistent across columns in the table.
 		//Other column (boundary)
 		@Test
 		public void calculateColumnTotalTestOtherColumn() {
@@ -127,6 +133,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Column total should be 15.", 15, DataUtilities.calculateColumnTotal(values, 1), .000000001d);
 		}
 		
+        //The test calculateColumnTotalTestNoRows() checks the sum of a column that is 0
 		//zero total (boundary)
 		@Test
 		public void calculateColumnTotalTestZeroTotal() {
@@ -148,6 +155,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		//ROWS
 		
+        //The test calculateRowTotalTest() checks the sum of a row that only contains positive rational numbers.
 		//regular function
 		@Test
 		public void calculateRowTotalTest() {
@@ -168,6 +176,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be 15.", 15, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
+        //The test calculateRowTotalTestZero() checks the sum where one of the values is zero to ensure that this does not cause problems to the summation
 		//zero value
 		@Test
 		public void calculateRowTotalTestZero() {
@@ -188,7 +197,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be 10.", 10, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
-		//zero total
+		//The test calculateRowTotalTestNoRows() checks the sum of a row that is 0.
 		@Test
 		public void calculateRowTotalTestZeroTotal() {
 			mockingContext.checking(new Expectations() {
@@ -208,7 +217,8 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be 0.", 0, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
-		//Negative
+
+		//The test calculateRowTotalTest() checks the sum of a row that contains a mix of positive and negative rational numbers.
 		@Test
 		public void calculateRowTotalTestNegative() {
 			mockingContext.checking(new Expectations() {
@@ -228,7 +238,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be 5.", 5, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
-		//Negative total
+		//The test calculateColumnTotalTest() checks the sum of a column that contains a mix of positive and negative rational numbers with a sum that is negative.
 		@Test
 		public void calculateRowTotalTestNegativeTotal() {
 			mockingContext.checking(new Expectations() {
@@ -248,7 +258,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be -2.5.", -2.5, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
-		//No columns
+		//The test calculateRowTotalTestNoColumns() checks the sum of a row that has no columns to ensure that the sum is 0.
 		@Test
 		public void calculateRowTotalTestNoColumns() {
 			mockingContext.checking(new Expectations() {
@@ -262,7 +272,7 @@ public class DataUtilitiesTest extends DataUtilities {
 			assertEquals("Row total should be 0.", 0, DataUtilities.calculateRowTotal(values, 0), .000000001d);
 		}
 		
-		//Other row
+		//The test calculateRowTotalTestOtherRow() checks the sum of a different row to ensure that these tests were consistent across rows in the table.
 		@Test
 		public void calculateRowTotalTestOtherRow() {
 			mockingContext.checking(new Expectations() {
@@ -292,12 +302,14 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		Double [] objectDoubleArray;
 		
-		
+		//The constructor initializes primitiveDoubleArray, and objectDoubleArray
 		public createNumberArrayTests(double [] arr, Double [] arr2) {
 			this.primitiveDoubleArray = arr;
 			this.objectDoubleArray = arr2;
 		}
 		
+        //Sets up parameterized testing and all the test cases that will check if the createNumberArray(double[]) function has bugs
+        //Since we used weak equivalence class testing we used several inputs to ensure that the function works as intended
 		@Parameters
 	    public static Collection<Object[]> data(){
 	    	return Arrays.asList(new Object[][] {
@@ -332,6 +344,9 @@ public class DataUtilitiesTest extends DataUtilities {
 			this.objectDoubleArray2D = arr2;
 		}
 		
+
+        //Sets up parameterized testing and all the test cases that will check if the createNumberArray2D(double[][]) function has bugs
+        //Since we used weak equivalence class testing we used several inputs to ensure that the function works as intended
 		@Parameters
 	    public static Collection<Object[]> data(){
 	    	return Arrays.asList(new Object[][] {
@@ -414,7 +429,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		double [][] arr4;
 		
 		
-		
+		//Sets up a
 		@Before
 		public void setUp() throws Exception { 
 			arr1 = new double [][]{
@@ -429,21 +444,26 @@ public class DataUtilitiesTest extends DataUtilities {
 				{55,2,4},
 				{4,2,1}
 			};
-			arr3 = new double [][]{
+			arr4 = new double [][]{
 				{55,2,4},
 				{4,2,1},
 				{444}
 			};
 		}
-			
+
+        // The equalsTestMatching() test checks if the equal(double[][], double[][]) function will return true given two arrays which are the same.	
 		@Test
 		public void equalsTestMatching() {
 			assertTrue("They should be the same.", DataUtilities.equal(arr1, arr2));
 		}
+
+        // The equalsTestNotMatching() test checks if the equal(double[][], double[][]) function will return false given two arrays which are the different.
 		@Test
 		public void equalsTestNotMatching() {
 			assertFalse("They should be different.", DataUtilities.equal(arr1, arr3));
 		}
+        
+        //The equalsTestNotMatchingExtraRow() test checks if the equal(double[][], double[][]) function will return false given two arrays which are different sizes.
 		@Test
 		public void equalsTestNotMatchingExtraRow() {
 			assertFalse("They should be different.", DataUtilities.equal(arr3, arr4));
