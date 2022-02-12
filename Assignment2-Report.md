@@ -4,9 +4,9 @@
  
 | Group \#:      |  5  |
 | -------------- | --- |
-| Student Names: |  Nicholas Knapton   |
-|                |  Jacob Artuso   |
-|                |  Brian Kramer  |
+| Student Names: |  Jacob Artuso   |
+|                |  Brian Kramer   |
+|                |  Nicholas Knapton  |
 |                |  Colin Christophe   |
  
 # 1 Introduction
